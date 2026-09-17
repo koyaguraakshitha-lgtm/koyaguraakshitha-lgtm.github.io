@@ -1,42 +1,61 @@
-/* =========================================================
-   DATA ANALYTICS BACKGROUND
-========================================================= */
+/* =====================================================
+   AKSHITHA KOYAGURA - DATA ANALYST PORTFOLIO
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b14;
+    color: #e8eef7;
+    line-height: 1.6;
     overflow-x: hidden;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =====================================================
+   BACKGROUND
+   ===================================================== */
+
+body {
     background:
         radial-gradient(
-            circle at 15% 20%,
-            rgba(56, 189, 248, 0.12),
-            transparent 28%
+            circle at 10% 20%,
+            rgba(56, 189, 248, 0.10),
+            transparent 25%
         ),
         radial-gradient(
-            circle at 85% 30%,
-            rgba(139, 92, 246, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 50% 90%,
-            rgba(14, 165, 233, 0.08),
-            transparent 35%
+            circle at 90% 20%,
+            rgba(139, 92, 246, 0.10),
+            transparent 25%
         ),
         #050b14;
 }
 
 
-/* =========================================================
-   DATA GRID
-========================================================= */
+/* DATA GRID */
 
 body::before {
     content: "";
-
     position: fixed;
     inset: 0;
-
-    pointer-events: none;
 
     background-image:
         linear-gradient(
@@ -51,120 +70,149 @@ body::before {
 
     background-size: 60px 60px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent 90%
-    );
-
-    z-index: -3;
+    pointer-events: none;
+    z-index: -5;
 }
 
 
-/* =========================================================
-   GLOWING DATA ORBS
-========================================================= */
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
 
-body::after {
-    content: "";
-
+.navbar {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-    width: 450px;
-    height: 450px;
+    height: 75px;
 
-    top: 10%;
-    right: -150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(5, 11, 20, 0.92);
+
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    z-index: 1000;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border-radius: 50%;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(56, 189, 248, 0.14),
-            rgba(56, 189, 248, 0.04) 40%,
-            transparent 70%
-        );
+    background: #38bdf8;
+    color: #050b14;
 
-    filter: blur(10px);
+    font-weight: bold;
+    font-size: 18px;
 
-    animation: floatingOrb 10s ease-in-out infinite alternate;
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.25);
+}
 
-    pointer-events: none;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
 
-    z-index: -2;
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+
+    text-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5);
 }
 
 
-/* =========================================================
-   HERO BACKGROUND
-========================================================= */
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 10% 80px;
+
     position: relative;
     overflow: hidden;
 
     background:
         radial-gradient(
-            circle at 20% 40%,
-            rgba(56, 189, 248, 0.10),
-            transparent 30%
+            circle at 75% 45%,
+            rgba(56, 189, 248, 0.12),
+            transparent 25%
         ),
         radial-gradient(
-            circle at 80% 20%,
-            rgba(139, 92, 246, 0.12),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #050b14 0%,
-            #071426 50%,
-            #050b14 100%
+            circle at 90% 30%,
+            rgba(139, 92, 246, 0.10),
+            transparent 25%
         );
 }
 
 
-/* =========================================================
-   ANALYTICS DECORATION
-========================================================= */
+/* LARGE DATA CIRCLE */
 
 .hero::before {
     content: "";
 
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    width: 520px;
+    height: 520px;
 
-    right: -150px;
+    right: -170px;
     top: 50%;
 
     transform: translateY(-50%);
 
     border-radius: 50%;
 
-    border: 1px solid rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.15);
 
     box-shadow:
         0 0 0 50px rgba(56, 189, 248, 0.025),
         0 0 0 100px rgba(56, 189, 248, 0.018),
         0 0 0 150px rgba(56, 189, 248, 0.012);
-
-    pointer-events: none;
 }
 
 
-/* =========================================================
-   DATA POINTS
-========================================================= */
+/* DATA POINTS */
 
 .hero::after {
     content: "";
 
     position: absolute;
 
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
 
     right: 20%;
     top: 30%;
@@ -174,127 +222,685 @@ body::after {
     background: #38bdf8;
 
     box-shadow:
-        80px 60px 0 rgba(56, 189, 248, 0.7),
-        150px -30px 0 rgba(139, 92, 246, 0.7),
-        210px 100px 0 rgba(56, 189, 248, 0.5),
-        -70px 160px 0 rgba(139, 92, 246, 0.5),
-        120px 220px 0 rgba(56, 189, 248, 0.4);
+        80px 60px 0 #38bdf8,
+        160px -30px 0 #8b5cf6,
+        220px 90px 0 #38bdf8,
+        -80px 160px 0 #8b5cf6,
+        100px 220px 0 #38bdf8;
 
-    animation: dataPulse 4s ease-in-out infinite alternate;
+    opacity: 0.7;
 
-    pointer-events: none;
+    animation: pulse 4s infinite alternate;
 }
-
-
-/* =========================================================
-   HERO CONTENT ABOVE BACKGROUND
-========================================================= */
 
 .hero-content {
+    max-width: 850px;
+
     position: relative;
-    z-index: 5;
+
+    z-index: 10;
+}
+
+.intro {
+    color: #38bdf8;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1.05;
+
+    margin-bottom: 15px;
+
+    color: #f8fafc;
+}
+
+.hero h2 {
+    font-size: 30px;
+
+    color: #94a3b8;
+
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    font-size: 18px;
+
+    color: #aebdce;
+
+    margin-bottom: 35px;
 }
 
 
-/* =========================================================
-   SECTION BACKGROUND
-========================================================= */
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    background: #38bdf8;
+
+    color: #04101d;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(56, 189, 248, 0.25);
+}
+
+.btn-outline {
+    background: transparent;
+
+    color: #38bdf8;
+
+    border: 1px solid #38bdf8;
+}
+
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
 
 .section {
     position: relative;
 
+    padding: 100px 10%;
+
     background:
         radial-gradient(
             circle at 10% 80%,
-            rgba(56, 189, 248, 0.045),
+            rgba(56, 189, 248, 0.04),
             transparent 25%
         ),
         #07111f;
 }
 
-
-/* =========================================================
-   DARK SECTIONS
-========================================================= */
-
 .dark-section {
     background:
         radial-gradient(
             circle at 90% 10%,
-            rgba(139, 92, 246, 0.08),
+            rgba(139, 92, 246, 0.07),
             transparent 25%
         ),
-        radial-gradient(
-            circle at 10% 90%,
-            rgba(56, 189, 248, 0.06),
-            transparent 25%
-        ),
-        #081321;
+        #091625;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #f8fafc;
+
+    font-size: 40px;
 }
 
 
-/* =========================================================
-   CARD GLASS EFFECT
-========================================================= */
+/* =====================================================
+   ABOUT
+   ===================================================== */
 
-.skill-card,
-.project-card,
-.experience-card,
-.education-card,
-.certificate-card,
-.highlight-card,
-.achievement-card {
-    background:
-        linear-gradient(
-            145deg,
-            rgba(16, 31, 51, 0.92),
-            rgba(8, 20, 35, 0.92)
-        );
+.about-container {
+    display: grid;
 
-    backdrop-filter: blur(10px);
+    grid-template-columns: 1.3fr 1fr;
 
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.18);
+    gap: 60px;
+
+    align-items: center;
 }
 
+.about-text p {
+    color: #aebdce;
 
-/* =========================================================
-   CARD HOVER GLOW
-========================================================= */
+    margin-bottom: 20px;
 
-.skill-card:hover,
-.project-card:hover,
-.education-card:hover,
-.certificate-card:hover,
+    font-size: 17px;
+}
+
+.about-highlights {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.highlight-card {
+    padding: 25px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border: 1px solid rgba(56, 189, 248, 0.10);
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
 .highlight-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
 
     box-shadow:
-        0 10px 40px rgba(56, 189, 248, 0.08),
-        0 0 20px rgba(56, 189, 248, 0.04);
+        0 10px 30px rgba(56, 189, 248, 0.08);
+}
+
+.highlight-card h3 {
+    color: #38bdf8;
+
+    margin-bottom: 8px;
+}
+
+.highlight-card p {
+    color: #94a3b8;
+
+    font-size: 14px;
 }
 
 
-/* =========================================================
-   ANIMATIONS
-========================================================= */
+/* =====================================================
+   SKILLS
+   ===================================================== */
 
-@keyframes floatingOrb {
+.skills-grid {
+    display: grid;
 
-    0% {
-        transform: translate(0, 0);
-    }
+    grid-template-columns: repeat(3, 1fr);
 
-    50% {
-        transform: translate(-50px, 40px);
-    }
+    gap: 22px;
+}
 
-    100% {
-        transform: translate(-20px, 80px);
-    }
+.skill-card {
+    padding: 30px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border: 1px solid rgba(56, 189, 248, 0.10);
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 10px 30px rgba(56, 189, 248, 0.08);
+}
+
+.skill-icon {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: #f8fafc;
+
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #94a3b8;
+
+    font-size: 14px;
 }
 
 
-@keyframes dataPulse {
+/* =====================================================
+   EXPERIENCE
+   ===================================================== */
+
+.timeline {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.experience-card {
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border-left: 3px solid #38bdf8;
+
+    border-radius: 0 10px 10px 0;
+
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateX(6px);
+
+    box-shadow:
+        0 10px 30px rgba(56, 189, 248, 0.07);
+}
+
+.experience-date {
+    display: inline-block;
+
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.experience-card h3 {
+    color: #f8fafc;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.experience-card h4 {
+    color: #94a3b8;
+
+    margin-bottom: 15px;
+}
+
+.experience-card p,
+.experience-card li {
+    color: #aebdce;
+
+    font-size: 14px;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+
+    list-style: disc;
+}
+
+.experience-card li {
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   EDUCATION
+   ===================================================== */
+
+.education-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.education-card {
+    padding: 30px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border: 1px solid rgba(56, 189, 248, 0.10);
+
+    border-radius: 10px;
+}
+
+.education-card span {
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.education-card h3 {
+    color: #f8fafc;
+
+    margin: 10px 0;
+
+    font-size: 21px;
+}
+
+.education-card h4 {
+    color: #94a3b8;
+
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    color: #aebdce;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   PROJECTS
+   ===================================================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 35px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border: 1px solid rgba(56, 189, 248, 0.10);
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 15px 35px rgba(56, 189, 248, 0.08);
+}
+
+.project-number {
+    color: #38bdf8;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: #f8fafc;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #aebdce;
+
+    margin-bottom: 20px;
+}
+
+.project-tools {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.project-tools span {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #13273c;
+
+    color: #38bdf8;
+
+    font-size: 12px;
+}
+
+.project-link {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   CERTIFICATIONS
+   ===================================================== */
+
+.certifications-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.certificate-card {
+    padding: 35px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border: 1px solid rgba(56, 189, 248, 0.10);
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+}
+
+.certificate-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+    color: #f8fafc;
+
+    margin-bottom: 10px;
+}
+
+.certificate-card p {
+    color: #38bdf8;
+}
+
+.certificate-card span {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ACHIEVEMENTS
+   ===================================================== */
+
+.achievement-card {
+    max-width: 700px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    background: rgba(16, 31, 51, 0.85);
+
+    border: 1px solid rgba(56, 189, 248, 0.10);
+
+    border-radius: 10px;
+}
+
+.achievement-icon {
+    font-size: 40px;
+}
+
+.achievement-card h3 {
+    color: #f8fafc;
+
+    margin-bottom: 5px;
+}
+
+.achievement-card p {
+    color: #38bdf8;
+}
+
+.achievement-card span {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact-section {
+    position: relative;
+
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(56, 189, 248, 0.08),
+            transparent 40%
+        ),
+        #050b14;
+}
+
+.contact-text {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #aebdce;
+}
+
+.contact-details {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.contact-details a,
+.contact-details span {
+    color: #cbd5e1;
+}
+
+.contact-details a:hover {
+    color: #38bdf8;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.social-links a {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #030810;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+
+@keyframes pulse {
 
     0% {
         opacity: 0.35;
@@ -308,28 +914,108 @@ body::after {
 
     100% {
         opacity: 0.45;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
 }
 
 
-/* =========================================================
+/* =====================================================
    SCROLLBAR
-========================================================= */
+   ===================================================== */
 
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #050b14;
+    background: #030810;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1e4863;
+    background: #1d4058;
+
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #38bdf8;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 150px 7% 80px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .education-grid,
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details {
+        flex-direction: column;
+    }
 }
